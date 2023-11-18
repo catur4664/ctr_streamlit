@@ -24,6 +24,8 @@ import pydeck as pdk
 import streamlit as st
 from streamlit_autorefresh import st_autorefresh
 
+# SETTING PAGE CONFIG TO WIDE MODE AND ADDING A TITLE AND FAVICON
+st.set_page_config(layout="wide", page_title="NYC Ridesharing Demo", page_icon=":taxi:")
 # Run the autorefresh about every 2000 milliseconds (2 seconds) and stop
 # after it's been refreshed 100 times.
 count = st_autorefresh(interval=2000, limit=100, key="fizzbuzzcounter")
@@ -40,10 +42,6 @@ elif count % 5 == 0:
     st.write("Buzz")
 else:
     st.write(f"Count: {count}")
-
-
-# SETTING PAGE CONFIG TO WIDE MODE AND ADDING A TITLE AND FAVICON
-st.set_page_config(layout="wide", page_title="NYC Ridesharing Demo", page_icon=":taxi:")
 
 
 # LOAD DATA ONCE
